@@ -43,11 +43,29 @@ int main() {
     cout << endl;
     step();
 
-    cout << "Variables maximised: " << endl;
+    cout << "Maximised variables: " << endl;
 
-    cout << "maxChar: " << maxChar << endl;
+    cout << "maxChar: " << maxChar << " (" << int(maxChar) << ")" << endl;
     cout << "maxInt: " << maxInt << endl;
     cout << "maxDouble: " << maxDouble << endl;
+
+    cout << endl;
+    step();
+
+    cout << "Incrementing variables by 1..." << endl;
+
+    maxChar++;
+    maxInt++;
+    maxDouble = maxDouble + 1;
+
+    cout << endl;
+    step();
+
+    cout << "Maximised variables + 1: " << endl;
+
+    cout << "maxChar: " << maxChar << " (" << int(maxChar) << ")" << " := Overflowed to minimum value." << endl;
+    cout << "maxInt: " << maxInt << " := Overflowed to minimum value." << endl;
+    cout << "maxDouble: " << maxDouble << " := A Double's maximum is a special value, it does not overflow, it simply doesn't change as it is at its maximum." << endl;
 
     return 0;
 }
